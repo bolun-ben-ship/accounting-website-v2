@@ -1,30 +1,31 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Outfit:wght@400;500;600;700&display=swap');
 @import "tailwindcss";
 
 @theme {
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
   --font-display: "Outfit", sans-serif;
+  --font-serif: "Libre Baskerville", serif;
   
-  --color-brand-950: #020617; /* Midnight Blue */
-  --color-brand-900: #0f172a;
-  --color-brand-500: #3b82f6; /* Electric Blue */
-  --color-accent: #fbbf24; /* Soft Gold */
+  --color-brand-950: #0f172a; /* Navy Blue */
+  --color-brand-900: #1e293b;
+  --color-brand-500: #2563eb; /* Corporate Blue */
+  --color-accent: #b45309; /* Deep Amber/Gold */
 }
 
 @layer base {
   body {
-    @apply bg-brand-950 text-slate-200 font-sans antialiased;
+    @apply bg-white text-slate-700 font-sans antialiased;
   }
   
   h1, h2, h3, h4, h5, h6 {
-    @apply font-display;
+    @apply font-display text-brand-950;
   }
 }
 
-.glass {
-  @apply bg-white/5 backdrop-blur-lg border border-white/10;
+.card-shadow {
+  @apply bg-white border border-slate-100 shadow-sm transition-all duration-300 hover:shadow-md hover:border-slate-200;
 }
 
-.glass-hover {
-  @apply transition-all duration-300 hover:bg-white/10 hover:border-white/20;
+.section-divider {
+  @apply border-t border-slate-100;
 }
